@@ -76,6 +76,52 @@ CMAKE_BINARY_DIR = /Users/user/Desktop/Informatyka/IIIrok/ZPP/MMSeq2/cmake-build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"/Users/user/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.8084.11/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"/Users/user/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.8084.11/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"/Users/user/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.8084.11/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"/Users/user/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.8084.11/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"/Users/user/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.8084.11/CLion.app/Contents/bin/cmake/mac/bin/cmake" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"/Users/user/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.8084.11/CLion.app/Contents/bin/cmake/mac/bin/cmake" -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Only default component available"
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -143,6 +189,33 @@ MMSeq2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/build
 .PHONY : MMSeq2/fast
 
+blosum.o: blosum.cpp.o
+
+.PHONY : blosum.o
+
+# target to build an object file
+blosum.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/blosum.cpp.o
+.PHONY : blosum.cpp.o
+
+blosum.i: blosum.cpp.i
+
+.PHONY : blosum.i
+
+# target to preprocess a source file
+blosum.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/blosum.cpp.i
+.PHONY : blosum.cpp.i
+
+blosum.s: blosum.cpp.s
+
+.PHONY : blosum.s
+
+# target to generate assembly for a file
+blosum.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/blosum.cpp.s
+.PHONY : blosum.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -170,6 +243,114 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+mmseq.o: mmseq.cpp.o
+
+.PHONY : mmseq.o
+
+# target to build an object file
+mmseq.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/mmseq.cpp.o
+.PHONY : mmseq.cpp.o
+
+mmseq.i: mmseq.cpp.i
+
+.PHONY : mmseq.i
+
+# target to preprocess a source file
+mmseq.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/mmseq.cpp.i
+.PHONY : mmseq.cpp.i
+
+mmseq.s: mmseq.cpp.s
+
+.PHONY : mmseq.s
+
+# target to generate assembly for a file
+mmseq.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/mmseq.cpp.s
+.PHONY : mmseq.cpp.s
+
+mock_structures.o: mock_structures.cpp.o
+
+.PHONY : mock_structures.o
+
+# target to build an object file
+mock_structures.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/mock_structures.cpp.o
+.PHONY : mock_structures.cpp.o
+
+mock_structures.i: mock_structures.cpp.i
+
+.PHONY : mock_structures.i
+
+# target to preprocess a source file
+mock_structures.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/mock_structures.cpp.i
+.PHONY : mock_structures.cpp.i
+
+mock_structures.s: mock_structures.cpp.s
+
+.PHONY : mock_structures.s
+
+# target to generate assembly for a file
+mock_structures.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/mock_structures.cpp.s
+.PHONY : mock_structures.cpp.s
+
+qsequence.o: qsequence.cpp.o
+
+.PHONY : qsequence.o
+
+# target to build an object file
+qsequence.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/qsequence.cpp.o
+.PHONY : qsequence.cpp.o
+
+qsequence.i: qsequence.cpp.i
+
+.PHONY : qsequence.i
+
+# target to preprocess a source file
+qsequence.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/qsequence.cpp.i
+.PHONY : qsequence.cpp.i
+
+qsequence.s: qsequence.cpp.s
+
+.PHONY : qsequence.s
+
+# target to generate assembly for a file
+qsequence.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/qsequence.cpp.s
+.PHONY : qsequence.cpp.s
+
+tsequence.o: tsequence.cpp.o
+
+.PHONY : tsequence.o
+
+# target to build an object file
+tsequence.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/tsequence.cpp.o
+.PHONY : tsequence.cpp.o
+
+tsequence.i: tsequence.cpp.i
+
+.PHONY : tsequence.i
+
+# target to preprocess a source file
+tsequence.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/tsequence.cpp.i
+.PHONY : tsequence.cpp.i
+
+tsequence.s: tsequence.cpp.s
+
+.PHONY : tsequence.s
+
+# target to generate assembly for a file
+tsequence.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MMSeq2.dir/build.make CMakeFiles/MMSeq2.dir/tsequence.cpp.s
+.PHONY : tsequence.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -177,11 +358,30 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... MMSeq2"
+	@echo "... blosum.o"
+	@echo "... blosum.i"
+	@echo "... blosum.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mmseq.o"
+	@echo "... mmseq.i"
+	@echo "... mmseq.s"
+	@echo "... mock_structures.o"
+	@echo "... mock_structures.i"
+	@echo "... mock_structures.s"
+	@echo "... qsequence.o"
+	@echo "... qsequence.i"
+	@echo "... qsequence.s"
+	@echo "... tsequence.o"
+	@echo "... tsequence.i"
+	@echo "... tsequence.s"
 .PHONY : help
 
 
